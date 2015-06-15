@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+
+    <%= render "review", review: @review %>
+  </div>
+
+  <div class="row">
+
+      <%= link_to "Delete", restaurant_review_path(@restaurant, @review), method: :delete, class: "btn btn-danger", data: {confirm: "Are you sure?"} %>
+      <br>
+      <br>
+      <%= link_to "back to restaurant list", restaurant_path, {class: "btn btn-default"} %>
+
+    </div>
+
+  </div>
+</div>

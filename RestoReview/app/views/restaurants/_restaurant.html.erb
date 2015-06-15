@@ -1,0 +1,15 @@
+<div class="col-xs-12 col-sm-6">
+  <div class="restaurant">
+    <div class="row">
+        <%= link_to restaurant_path(restaurant) do %>
+        <h2><%= restaurant.name %></h2>
+        <% end %>
+        <p><strong><%=  restaurant.category %></strong></p>
+        <p class="address"><%= restaurant.address %></p>
+        <p><%= restaurant.phone_number %></p>
+        <% restaurant.reviews.each do |review| %>
+        <p><%="#{review.rating} : #{review.content}"%></p>
+        <% end %>
+    </div>
+  </div>
+</div>

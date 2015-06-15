@@ -1,0 +1,9 @@
+<%= simple_form_for [@restaurant, @review] do |f| %>
+  <%= f.error_notification %>
+
+  <%= f.input :rating, collection: (0..5) %>
+  <%= f.input :content %>
+
+  <%= f.button :submit %>
+<% end %>
+
